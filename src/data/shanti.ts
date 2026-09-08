@@ -1,3 +1,5 @@
+import { upanishads, type Recension, type VedaId } from "@/data/content";
+
 export type ShantiMantra = {
   id: string;
   title: string;
@@ -53,3 +55,29 @@ export const mantraAssignments: Record<string, string> = {
 
 export const mantraForUpanishad = (slug: string) => shantiMantras.find((mantra) => mantra.id === mantraAssignments[slug]);
 export const textsForMantra = (id: string) => Object.entries(mantraAssignments).filter(([, mantraId]) => mantraId === id).map(([slug]) => slug);
+
+export const shantiRefrain = {
+  devanagari: "ॐ शान्तिः शान्तिः शान्तिः",
+  transliteration: "Oṃ śāntiḥ śāntiḥ śāntiḥ",
+  meaning: "Peace, peace, peace — spoken three times, for the disturbances that come from within, from other beings, and from the world at large.",
+};
+
+export const mantraForBranch = (veda: VedaId, recension?: Recension) => {
+  const slug = upanishads.find((item) => item.veda === veda && item.recension === recension)?.slug;
+  return slug ? mantraForUpanishad(slug) : undefined;
+};
+
+const vedaLabels: Record<string, string> = {
+  rig: "Ṛg Veda", sama: "Sāma Veda", atharva: "Atharva Veda",
+  "yajur:shukla": "Śukla Yajur Veda", "yajur:krishna": "Kṛṣṇa Yajur Veda",
+};
+
+export const vedaMismatches = () => upanishads.filter((item) => {
+  const expected = vedaLabels[item.recension ? `${item.veda}:${item.recension}` : item.veda];
+  return mantraForUpanishad(item.slug)?.veda !== expected;
+});
+
+if (process.env.NODE_ENV !== "production") {
+  const bad = vedaMismatches();
+  if (bad.length) console.warn(`Veda/mantra mismatch: ${bad.map((item) => item.slug).join(", ")}`);
+}

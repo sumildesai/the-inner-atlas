@@ -90,10 +90,16 @@ em { color:var(--gold);font-weight:400; }
 .tradition-note { font-size:.78rem;color:var(--muted);font-style:italic; }
 
 .card-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line); }
-.text-card { background:var(--cream);padding:2rem;min-height:430px;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:.25s; }
+.text-card { background:var(--cream);padding:2rem;min-height:430px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:.25s; }
 .text-card:before { content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:.3s; }
 .text-card:hover { transform:translateY(-6px);box-shadow:0 12px 30px rgba(44,39,30,.1);z-index:2; }
 .text-card:hover:before { transform:scaleX(1); }
+.text-card > :not(.upanishad-emblem) { position:relative;z-index:1; }
+.upanishad-emblem { display:inline-grid;place-items:center;color:var(--emblem-color,var(--accent,currentColor)); }
+.upanishad-emblem svg { display:block;width:100%;height:100%;overflow:visible; }
+.upanishad-emblem path { fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke; }
+.upanishad-emblem--card { position:absolute;z-index:0;right:1rem;top:5rem;width:9rem;aspect-ratio:1;opacity:.1;transform:rotate(-4deg);transition:opacity .3s,transform .3s;pointer-events:none; }
+.text-card:hover .upanishad-emblem--card { opacity:.17;transform:rotate(0deg) scale(1.03); }
 .card-top { display:flex;justify-content:space-between;color:var(--muted);font-size:.7rem; }
 .devanagari { font-family:Georgia,"Noto Serif Devanagari",serif;font-size:1.8rem;color:var(--accent,var(--gold)); }
 .text-card h3 { font-family:Georgia,serif;font-size:2.3rem;font-weight:400;margin:.15rem 0 .8rem; }
@@ -141,7 +147,11 @@ em { color:var(--gold);font-weight:400; }
 .hero-orbit { display:grid;place-items:center;position:relative;overflow:hidden; }
 .hero-orbit:before,.hero-orbit:after { content:"";position:absolute;width:70%;aspect-ratio:1;border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:50%; }
 .hero-orbit:after { width:45%; }
-.hero-orbit span { font-family:Georgia,"Noto Serif Devanagari",serif;font-size:clamp(5rem,11vw,10rem);color:var(--accent);z-index:1; }
+.hero-devanagari { font-family:Georgia,"Noto Serif Devanagari",serif;font-size:clamp(5rem,11vw,10rem);color:var(--accent);z-index:1; }
+.hero-emblem-lockup { position:relative;z-index:1;display:grid;place-items:center;color:var(--accent); }
+.upanishad-emblem--hero { width:clamp(10rem,19vw,15rem);aspect-ratio:1; }
+.upanishad-emblem--hero path { stroke-width:1.2; }
+.hero-emblem-script { position:absolute;right:-1rem;bottom:1rem;display:grid;place-items:center;width:3.5rem;aspect-ratio:1;border:1px solid color-mix(in srgb,var(--accent) 55%,transparent);border-radius:50%;background:color-mix(in srgb,var(--paper) 88%,transparent);font-family:Georgia,"Noto Serif Devanagari",serif;font-size:1.35rem;color:var(--accent); }
 .hero-copy { display:flex;flex-direction:column;justify-content:center;padding:5rem; }
 .hero-copy h1 { font-family:Georgia,serif;font-size:clamp(4rem,7vw,7rem);font-weight:400;line-height:.9;margin:1rem 0 2rem; }
 .hero-question { max-width:520px;font-family:Georgia,serif;font-size:1.45rem; }
@@ -164,6 +174,10 @@ em { color:var(--gold);font-weight:400; }
 .related-section { background:var(--paper-deep);padding:7rem 0; }
 .related-list { display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line); }
 .related-list>a { display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.2rem;padding:2rem;border-right:1px solid var(--line); }
+.related-mark { display:grid;place-items:center;min-width:2.5rem; }
+.related-mark.has-emblem { gap:.15rem; }
+.upanishad-emblem--related { width:2.8rem;aspect-ratio:1; }
+.related-mark.has-emblem .devanagari { font-size:1rem;line-height:1; }
 .related-list h3 { font-family:Georgia,serif;font-size:1.8rem;font-weight:400;margin:0; }
 .profile-pagination { display:flex;justify-content:space-between;padding:2rem max(24px,5vw);font-size:.67rem;text-transform:uppercase;letter-spacing:.1em; }
 
@@ -209,6 +223,71 @@ summary { cursor:pointer;text-transform:uppercase;letter-spacing:.12em;font-size
 .search-results small { display:block;color:var(--muted);font-size:.63rem;line-height:1.4; }
 .result-dot { width:7px;height:7px;border-radius:50%; }
 
+.veda-section { background:var(--night);color:#f0ece2;padding:8rem 0 6rem; }
+.veda-section .eyebrow,.veda-section .section-heading>p { color:#aaa99e; }
+.veda-division { position:relative; }
+.veda-branches { list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem;align-items:start; }
+.veda-column { position:relative;display:flex;flex-direction:column;padding-bottom:3.5rem; }
+.veda-crown { border-top:2px solid var(--veda);padding-top:1.1rem;margin-bottom:1.6rem; }
+.veda-devanagari { display:block;font-size:1.35rem;color:var(--veda);line-height:1.4; }
+.veda-crown h3 { font-family:Georgia,serif;font-size:1.5rem;font-weight:400;margin:.2rem 0 .6rem;letter-spacing:-.02em; }
+.veda-blurb { margin:0;color:#a9a79c;font-size:.86rem;line-height:1.6; }
+.veda-limbs { display:grid;gap:1.6rem;flex:1; }
+.veda-limbs.split { position:relative;padding-left:1rem;border-left:1px dashed rgba(208,186,135,.35); }
+.veda-limb-label { display:flex;align-items:baseline;gap:.5rem;margin:0 0 .7rem;font-size:.66rem;text-transform:uppercase;letter-spacing:.14em;color:#8d8b81; }
+.veda-limb-label span { font-size:.95rem;letter-spacing:0;color:var(--veda);text-transform:none; }
+.veda-texts { list-style:none;margin:0 0 .9rem;padding:0;display:grid;gap:1px;background:rgba(255,255,255,.1); }
+.veda-texts a { background:var(--night);display:flex;align-items:baseline;gap:.6rem;padding:.7rem .2rem .7rem 1rem;position:relative;transition:background .25s,padding .25s; }
+.veda-texts a::before { content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:var(--dot); }
+.veda-texts a:hover { background:rgba(255,255,255,.06);padding-left:1.3rem; }
+.veda-texts strong { font-weight:500;font-size:1rem; }
+.veda-texts small { color:#8d8b81;font-size:.85rem; }
+.veda-mantra { margin:0;font-size:.78rem;color:#8d8b81;font-family:Georgia,serif;font-style:italic; }
+.veda-mantra a { border-bottom:1px solid rgba(208,186,135,.5);color:#d5c9ab;font-style:normal; }
+.veda-mantra a:hover { color:var(--gold); }
+.mahavakya-trigger { margin-top:1.8rem;padding:1rem;text-align:left;color:#b8b4a8;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.12);cursor:pointer;transition:border-color .25s,background .25s,color .25s,transform .25s; }
+.mahavakya-trigger:hover { color:#f0ece2;border-color:var(--veda);transform:translateY(-2px); }
+.mahavakya-trigger[aria-pressed="true"] { color:#f0ece2;background:color-mix(in srgb,var(--veda) 13%,transparent);border-color:var(--veda); }
+.mahavakya-trigger span { display:block;margin-bottom:.35rem;color:var(--veda);font-size:.59rem;font-weight:650;letter-spacing:.15em;text-transform:uppercase; }
+.mahavakya-trigger strong { display:block;font-family:Georgia,serif;font-size:1.02rem;font-style:italic;font-weight:400;line-height:1.35; }
+.veda-column { transition:opacity .25s; }
+.veda-branches:has(.mahavakya-active) .veda-column:not(.mahavakya-active) { opacity:.7; }
+.veda-column.mahavakya-active { opacity:1; }
+.veda-texts a.mahavakya-source { background:color-mix(in srgb,var(--veda) 13%,var(--night));padding-left:1.3rem; }
+.source-mark { margin-left:auto;color:var(--veda);font-size:.54rem;font-weight:650;letter-spacing:.12em;text-transform:uppercase; }
+.veda-stem { position:absolute;bottom:0;left:0;width:1px;height:3rem;background:linear-gradient(var(--veda),rgba(208,186,135,.35));transition:width .25s,box-shadow .25s; }
+.veda-column.mahavakya-active .veda-stem { width:2px;box-shadow:0 0 12px var(--veda); }
+.mahavakya-detail { position:relative;margin:0 0 4rem;padding:2.4rem 3rem;border-top:1px solid var(--veda);border-bottom:1px solid rgba(255,255,255,.12);background:linear-gradient(110deg,color-mix(in srgb,var(--veda) 10%,transparent),transparent 55%); }
+.mahavakya-detail::before { content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--veda);box-shadow:0 0 14px var(--veda); }
+.mahavakya-detail-label { margin:0 0 .7rem;color:var(--veda);font-size:.62rem;font-weight:650;letter-spacing:.16em;text-transform:uppercase; }
+.mahavakya-devanagari { margin:0 0 1rem;color:#f4eee1;font-size:clamp(2rem,4.5vw,3.7rem);line-height:1.2; }
+.mahavakya-reading { display:flex;align-items:end;justify-content:space-between;gap:2rem; }
+.mahavakya-reading p { display:flex;align-items:baseline;gap:1rem;margin:0; }
+.mahavakya-reading em { color:#d5c9ab;font-family:Georgia,serif;font-size:1.1rem; }
+.mahavakya-reading p span { color:#a9a79c;font-size:.9rem; }
+.mahavakya-reading>a { flex:none;color:#d5c9ab;font-size:.75rem;border-bottom:1px solid rgba(208,186,135,.45); }
+.mahavakya-reading>a:hover { color:var(--veda); }
+.mahavakya-reading>a span { margin-left:.35rem;color:var(--veda); }
+.shanti-throughline { position:relative;text-align:center;padding-top:2.5rem; }
+.throughline-rule { position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(208,186,135,.55) 12%,rgba(208,186,135,.55) 88%,transparent); }
+.throughline-refrain { font-size:clamp(1.5rem,3.4vw,2.5rem);color:#f3ecdb;margin:0 0 .5rem;letter-spacing:.02em; }
+.throughline-iast { font-family:Georgia,serif;font-style:italic;color:var(--gold);margin:0 0 1rem;font-size:1.05rem; }
+.throughline-meaning { max-width:640px;margin:0 auto 1.4rem;color:#a9a79c;font-size:.92rem; }
+.shanti-throughline .arrow-link { color:#f0ece2; }
+
+@media (max-width:1000px) {
+  .veda-branches { grid-template-columns:repeat(2,1fr);gap:2.5rem 2rem; }
+}
+@media (max-width:640px) {
+  .veda-section { padding:5rem 0 4rem; }
+  .veda-branches { grid-template-columns:1fr;gap:2.8rem; }
+  .veda-column { padding-bottom:2.5rem; }
+  .veda-stem { height:1.6rem; }
+  .mahavakya-detail { margin-bottom:3rem;padding:1.7rem 1.2rem; }
+  .mahavakya-reading { align-items:start;flex-direction:column;gap:1rem; }
+  .mahavakya-reading p { align-items:start;flex-direction:column;gap:.25rem; }
+}
+
 @media (max-width:900px) {
   .site-header nav { display:none; }
   .search-label,kbd { display:none; }
@@ -246,6 +325,9 @@ summary { cursor:pointer;text-transform:uppercase;letter-spacing:.12em;font-size
   .mantra-meaning { grid-template-columns:1fr;gap:.5rem; }
   .card-grid,.concept-grid,.idea-river .content-width>div,.prose-grid { grid-template-columns:1fr; }
   .text-card { min-height:390px; }
+  .upanishad-emblem--card { right:.5rem;top:4.5rem;width:8rem; }
+  .upanishad-emblem--hero { width:10rem; }
+  .hero-emblem-script { right:-.5rem;bottom:.25rem;width:3rem;font-size:1.15rem; }
   .idea-river a { grid-template-columns:14px 1fr; }
   .idea-river small { display:none; }
   .page-hero { padding:7rem 22px 5rem; }
