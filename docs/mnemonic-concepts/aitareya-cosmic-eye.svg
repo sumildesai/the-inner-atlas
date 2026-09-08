@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560" role="img" aria-labelledby="title desc">
+  <title id="title">Aitareya cosmic eye mnemonic</title>
+  <desc id="desc">A calm open eye rests within a fine-line cosmic egg surrounded by subtle marks of creation.</desc>
+  <rect width="500" height="560" rx="28" fill="#f7f2e9"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The unmanifest whole -->
+    <path d="M250 61C159 61 103 169 112 287C121 407 176 493 250 493C324 493 379 407 388 287C397 169 341 61 250 61Z"
+      stroke="#171513" stroke-width="5"/>
+    <path d="M250 85C177 85 132 179 139 284C146 386 190 463 250 463C310 463 354 386 361 284C368 179 323 85 250 85Z"
+      stroke="#9d7958" stroke-width="2.5"/>
+
+    <!-- Consciousness looking through creation -->
+    <path d="M139 278C178 224 224 203 250 203C276 203 322 224 361 278C322 332 276 353 250 353C224 353 178 332 139 278Z"
+      stroke="#171513" stroke-width="5"/>
+    <path d="M157 278C189 248 219 238 250 238C281 238 311 248 343 278C311 308 281 318 250 318C219 318 189 308 157 278Z"
+      stroke="#171513" stroke-width="3"/>
+    <circle cx="250" cy="278" r="38" stroke="#171513" stroke-width="4"/>
+    <circle cx="250" cy="278" r="13" fill="#171513" stroke="none"/>
+    <circle cx="261" cy="266" r="5" fill="#f7f2e9" stroke="none"/>
+
+    <!-- Worlds and faculties emerging around the witnessing center -->
+    <g stroke="#9d7958" stroke-width="3">
+      <path d="M250 139V174M250 382V417"/>
+      <path d="M181 163L201 192M319 163L299 192"/>
+      <path d="M160 370L194 346M340 370L306 346"/>
+      <path d="M168 278H126M332 278H374"/>
+    </g>
+    <g fill="#171513">
+      <circle cx="250" cy="124" r="4"/>
+      <circle cx="250" cy="432" r="4"/>
+      <circle cx="171" cy="149" r="4"/>
+      <circle cx="329" cy="149" r="4"/>
+      <circle cx="146" cy="380" r="4"/>
+      <circle cx="354" cy="380" r="4"/>
+      <circle cx="110" cy="278" r="4"/>
+      <circle cx="390" cy="278" r="4"/>
+    </g>
+  </g>
+</svg>

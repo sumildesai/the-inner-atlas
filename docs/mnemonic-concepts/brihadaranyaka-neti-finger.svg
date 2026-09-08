@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560" role="img" aria-labelledby="title desc">
+  <title id="title">Brihadaranyaka neti neti finger mnemonic</title>
+  <desc id="desc">An elegant raised index finger moves gently from side to side, signifying not this, not this.</desc>
+  <rect width="500" height="560" rx="28" fill="#f7f2e9"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Open hand with one raised finger -->
+    <path d="M224 451
+             C203 427 190 392 190 354
+             V293
+             C190 278 202 266 217 266
+             C232 266 244 278 244 293
+             V326
+             V116
+             C244 94 259 78 279 78
+             C299 78 314 94 314 116
+             V287
+             V227
+             C314 208 327 194 345 194
+             C363 194 376 208 376 227
+             V310
+             V257
+             C376 239 389 226 406 226
+             C423 226 436 239 436 257
+             V346
+             C436 407 400 457 351 474
+             C308 489 255 480 224 451Z"
+      stroke="#171513" stroke-width="6"/>
+
+    <!-- Folded thumb -->
+    <path d="M244 342C266 324 290 319 314 326C335 332 347 350 343 369C339 387 321 398 300 394"
+      stroke="#171513" stroke-width="4"/>
+    <path d="M217 266C225 279 231 292 232 310" stroke="#8f675d" stroke-width="3"/>
+
+    <!-- Gentle wag: two refusals, not an angry gesture -->
+    <path d="M206 132C167 151 146 183 144 220" stroke="#8f675d" stroke-width="4"/>
+    <path d="M144 220L134 201M144 220L161 207" stroke="#8f675d" stroke-width="4"/>
+    <path d="M330 130C367 146 390 176 395 212" stroke="#8f675d" stroke-width="4"/>
+    <path d="M395 212L378 200M395 212L403 192" stroke="#8f675d" stroke-width="4"/>
+
+    <!-- A clear, ungrasped center above the gesture -->
+    <circle cx="270" cy="42" r="5" fill="#171513" stroke="none"/>
+  </g>
+</svg>

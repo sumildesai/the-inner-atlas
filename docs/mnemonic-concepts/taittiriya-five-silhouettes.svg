@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560" role="img" aria-labelledby="title desc">
+  <title id="title">Taittiriya five nested human silhouettes mnemonic</title>
+  <desc id="desc">Five fine-line seated human silhouettes nest inward toward a quiet central point.</desc>
+  <rect width="500" height="560" rx="28" fill="#f7f2e9"/>
+  <g transform="translate(250 270)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Annamaya: the broad physical form -->
+    <g stroke="#171513" stroke-width="5">
+      <circle cy="-158" r="42"/>
+      <path d="M-31-127C-68-100-78-37-68 43C-63 84-84 120-132 157"/>
+      <path d="M31-127C68-100 78-37 68 43C63 84 84 120 132 157"/>
+      <path d="M-132 157C-83 174-38 164 0 126C38 164 83 174 132 157"/>
+    </g>
+
+    <!-- Pranamaya -->
+    <g stroke="#b27c4c" stroke-width="4.3">
+      <circle cy="-116" r="33"/>
+      <path d="M-25-89C-52-66-58-17-51 42C-47 70-62 94-96 120"/>
+      <path d="M25-89C52-66 58-17 51 42C47 70 62 94 96 120"/>
+      <path d="M-96 120C-58 133-26 124 0 96C26 124 58 133 96 120"/>
+    </g>
+
+    <!-- Manomaya -->
+    <g stroke="#171513" stroke-width="3.7">
+      <circle cy="-78" r="25"/>
+      <path d="M-19-56C-39-38-43 0-38 43C-35 61-44 76-68 94"/>
+      <path d="M19-56C39-38 43 0 38 43C35 61 44 76 68 94"/>
+      <path d="M-68 94C-41 103-19 96 0 77C19 96 41 103 68 94"/>
+    </g>
+
+    <!-- Vijnanamaya -->
+    <g stroke="#b27c4c" stroke-width="3">
+      <circle cy="-45" r="17"/>
+      <path d="M-13-30C-26-17-28 9-25 40C-23 52-29 62-44 74"/>
+      <path d="M13-30C26-17 28 9 25 40C23 52 29 62 44 74"/>
+      <path d="M-44 74C-27 80-12 75 0 63C12 75 27 80 44 74"/>
+    </g>
+
+    <!-- Anandamaya: the quiet innermost form -->
+    <g stroke="#171513" stroke-width="2.5">
+      <circle cy="-20" r="10"/>
+      <path d="M-8-11C-15-3-16 12-14 31C-13 38-16 44-25 51"/>
+      <path d="M8-11C15-3 16 12 14 31C13 38 16 44 25 51"/>
+      <path d="M-25 51C-15 55-7 52 0 45C7 52 15 55 25 51"/>
+    </g>
+    <circle cy="22" r="5" fill="#b27c4c" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="title desc">
+  <title id="title">Kena eye and nose question-mark mnemonic</title>
+  <desc id="desc">A minimal eye flows into the bridge and tip of a nose, forming a question mark.</desc>
+  <rect width="500" height="500" rx="28" fill="#f7f2e9"/>
+  <g fill="none" stroke="#171513" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The upper question-mark curve doubles as an eye and brow. -->
+    <path d="M143 165C183 103 287 91 347 143C399 188 379 253 329 283C286 309 271 334 272 365"
+      stroke-width="18"/>
+    <path d="M155 175C194 144 251 140 294 166C259 194 198 198 155 175Z"
+      stroke-width="11"/>
+    <ellipse cx="230" cy="174" rx="17" ry="17" fill="#171513" stroke="none"/>
+    <!-- Nose bridge and tip complete the main descending stroke. -->
+    <path d="M329 283C313 292 301 305 295 322C289 339 295 350 312 351"
+      stroke-width="11"/>
+    <path d="M312 351C330 351 342 344 347 332" stroke-width="9"/>
+    <!-- Nostrils echo the question-mark dot without creating an expression. -->
+    <circle cx="274" cy="416" r="14" fill="#171513" stroke="none"/>
+    <path d="M238 416h-42" stroke="#b59455" stroke-width="4"/>
+    <path d="M310 416h42" stroke="#b59455" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="title desc">
+  <title id="title">Prashna five pranas mnemonic</title>
+  <desc id="desc">A simple seated body contains five directional currents representing prana, apana, samana, vyana, and udana.</desc>
+  <rect width="500" height="500" rx="28" fill="#f7f2e9"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Quiet seated body -->
+    <g stroke="#171513" stroke-width="5">
+      <circle cx="250" cy="92" r="40"/>
+      <path d="M250 132C221 145 203 178 203 219V315"/>
+      <path d="M250 132C279 145 297 178 297 219V315"/>
+      <path d="M203 188C166 211 145 247 141 289"/>
+      <path d="M297 188C334 211 355 247 359 289"/>
+      <path d="M203 315C173 336 153 368 148 407"/>
+      <path d="M297 315C327 336 347 368 352 407"/>
+      <path d="M148 407C193 423 226 413 250 386C274 413 307 423 352 407"/>
+    </g>
+
+    <!-- Udana: rising -->
+    <g stroke="#6f9185" stroke-width="5">
+      <path d="M250 171V72"/>
+      <path d="M250 72L234 94M250 72L266 94"/>
+    </g>
+
+    <!-- Prana: drawing inward to the chest -->
+    <g stroke="#171513" stroke-width="5">
+      <path d="M158 210C185 209 206 220 225 242"/>
+      <path d="M342 210C315 209 294 220 275 242"/>
+      <path d="M225 242L204 235M225 242L219 221"/>
+      <path d="M275 242L296 235M275 242L281 221"/>
+    </g>
+
+    <!-- Samana: equalizing around the navel -->
+    <g stroke="#6f9185" stroke-width="4.5">
+      <path d="M282 278C278 250 246 238 225 256C204 274 217 309 245 310C269 311 282 292 276 274"/>
+      <path d="M276 274L288 289M276 274L259 281"/>
+    </g>
+    <circle cx="250" cy="278" r="4" fill="#171513"/>
+
+    <!-- Vyana: pervading outward -->
+    <g stroke="#171513" stroke-width="4">
+      <path d="M205 292L164 315M295 292L336 315"/>
+      <path d="M164 315L176 297M164 315L184 316"/>
+      <path d="M336 315L324 297M336 315L316 316"/>
+    </g>
+
+    <!-- Apana: descending -->
+    <g stroke="#6f9185" stroke-width="5">
+      <path d="M250 319V375"/>
+      <path d="M250 375L234 352M250 375L266 352"/>
+    </g>
+
+    <!-- Five small marks reinforce the fivefold mnemonic. -->
+    <g fill="#171513">
+      <circle cx="250" cy="53" r="3"/>
+      <circle cx="143" cy="210" r="3"/>
+      <circle cx="357" cy="210" r="3"/>
+      <circle cx="250" cy="278" r="3"/>
+      <circle cx="250" cy="394" r="3"/>
+    </g>
+  </g>
+</svg>

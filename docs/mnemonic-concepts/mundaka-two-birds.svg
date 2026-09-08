@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" role="img" aria-labelledby="title desc">
+  <title id="title">Mundaka two birds mnemonic</title>
+  <desc id="desc">Two elegant birds share one branch; one reaches toward a fruit while the other watches quietly.</desc>
+  <rect width="600" height="500" rx="28" fill="#f7f2e9"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- One shared tree -->
+    <path d="M77 357C194 337 327 357 522 321" stroke="#171513" stroke-width="7"/>
+    <path d="M174 344C153 309 151 273 164 239" stroke="#171513" stroke-width="5"/>
+    <path d="M453 333C470 300 473 266 464 231" stroke="#171513" stroke-width="5"/>
+    <path d="M105 363C87 388 78 414 77 443M489 327C515 352 528 380 530 415"
+      stroke="#171513" stroke-width="4"/>
+
+    <!-- Experiencing bird, inclined toward the fruit -->
+    <g stroke="#171513" stroke-width="5">
+      <path d="M153 253C183 210 245 209 276 252C291 273 289 306 270 326C246 350 203 350 178 328C160 312 151 282 153 253Z"/>
+      <path d="M178 328C157 339 139 341 118 334C137 322 150 306 157 286"/>
+      <path d="M191 235C174 217 171 198 181 179C198 185 211 197 217 214"/>
+      <path d="M275 252C291 245 306 247 320 259C302 263 291 273 286 288"/>
+      <path d="M179 284C205 268 235 271 256 291C228 286 207 294 190 315"/>
+    </g>
+    <circle cx="229" cy="237" r="4" fill="#171513"/>
+
+    <!-- Fruit being tasted -->
+    <path d="M338 264C322 277 322 302 339 315C356 303 356 277 338 264Z"
+      fill="#719075" stroke="#171513" stroke-width="4"/>
+    <path d="M339 264C340 248 349 239 362 233" stroke="#171513" stroke-width="4"/>
+    <path d="M350 243C362 240 371 243 377 252C364 255 355 252 350 243Z"
+      fill="#719075" stroke="#171513" stroke-width="3"/>
+
+    <!-- Witnessing bird, upright and still -->
+    <g stroke="#171513" stroke-width="5">
+      <path d="M384 245C412 204 471 205 498 246C515 272 510 307 489 327C464 350 423 348 400 325C382 307 376 272 384 245Z"/>
+      <path d="M489 327C510 337 529 337 549 329C530 319 515 304 507 284"/>
+      <path d="M411 222C404 201 409 181 424 166C439 178 446 194 443 213"/>
+      <path d="M384 245C369 238 354 241 341 253C359 256 371 266 376 281"/>
+      <path d="M405 285C430 267 461 268 483 288C455 284 432 294 416 316"/>
+    </g>
+    <circle cx="429" cy="224" r="4" fill="#171513"/>
+
+    <!-- Quiet visual link between companions -->
+    <path d="M292 201C318 187 345 187 371 201" stroke="#719075" stroke-width="3"/>
+    <circle cx="331" cy="194" r="3.5" fill="#719075"/>
+  </g>
+</svg>

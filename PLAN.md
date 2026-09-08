@@ -211,3 +211,22 @@ Validation passes with ESLint, TypeScript, and a production Pages build using `N
 ## Remaining publishing step
 
 GitHub publication is blocked until the local GitHub CLI authentication is refreshed. The stored token for `sumildesai` is invalid. After running `gh auth refresh -h github.com`, create the private repository (default name: `the-inner-atlas`), add it as `origin`, push `main`, and enable Pages using GitHub Actions. The workflow is ready for that deployment.
+
+## Approved mnemonic emblem direction
+
+Use the existing Katha buffalo emblem as the baseline for a family of compact, monochrome line-art mnemonics. Each emblem should remain recognizable at card size, use restrained accent color, avoid unnecessary facial expression, and derive from a memorable image or teaching associated with its Upanishad.
+
+| Upanishad | Approved emblem concept | Textual reference | Concept-sketch status |
+|---|---|---|---|
+| Isha | A parted sun-disc revealing the presence within | 15–16: the golden covering is removed and the Sun's rays gathered so the seeker may behold the Person within | Concept only |
+| Kena | A question mark formed from an eye and the profile of a nose | 1.1–1.2: "By whom?" and the source behind sight, breath, hearing, speech, and thought | [Approved sketch](docs/mnemonic-concepts/kena-eye-nose.svg) |
+| Katha | A calm, expressionless buffalo head representing Yama | Nachiketa's dialogue with Yama structures the text; the buffalo is Yama's later traditional *vāhana* and is not described in a Katha verse | Existing production prototype |
+| Prashna | A simple human figure containing five directional currents: inward prāṇa, downward apāna, circling samāna, outward vyāna, and upward udāna | 3.3–3.7: the five functions of the one life-breath | [Approved thin-line sketch](docs/mnemonic-concepts/prashna-five-pranas.svg) |
+| Mundaka | Two birds on one branch, one tasting a fruit and the other resting as the silent witness | 3.1.1–3.1.2: the experiencing and witnessing selves as inseparable companions | [Approved sketch](docs/mnemonic-concepts/mundaka-two-birds.svg) |
+| Mandukya | A–U–M curves dissolving into one silent line | 8–12: the three audible measures and the soundless fourth, *turīya* | Concept only |
+| Taittiriya | Five nested human silhouettes progressing inward to a quiet bliss center | 2.1–2.5: the food, vital-breath, mind, understanding, and bliss persons later systematized as the five sheaths | [Approved sketch](docs/mnemonic-concepts/taittiriya-five-silhouettes.svg) |
+| Aitareya | An open eye within a cosmic egg, with subtle marks of the worlds emerging around it | 1.1–1.3 and 3.1.3: cosmic unfolding and *Prajñānam brahma*, "Consciousness is Brahman" | [Approved sketch](docs/mnemonic-concepts/aitareya-cosmic-eye.svg) |
+| Chandogya | A vast banyan tree emerging from a nearly invisible seed point | 6.12.1–6.12.3: the immense tree arises from an unseen subtle essence | Concept only |
+| Brihadaranyaka | A gently wagging raised index finger representing *neti neti*, "not this, not this" | 2.3.6 and 3.9.26: every limited description of the Self is negated | [Approved sketch](docs/mnemonic-concepts/brihadaranyaka-neti-finger.svg) |
+
+Production emblems should be redrawn as coherent `120 × 120` SVG paths rather than importing the exploratory sketches directly. Preserve the approved visual metaphors, simplify detail until each survives the smallest card treatment, and provide concise accessible labels that state the mnemonic rather than interpreting it as a literal depiction.
