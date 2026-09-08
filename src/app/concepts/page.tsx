@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { concepts, upanishads } from "@/data/content";
+
+export const metadata: Metadata = { title: "Core Ideas", description: "Explore eight recurring ideas across the ten principal Upanishads." };
+export default function ConceptsPage() { return <main id="main-content"><header className="page-hero"><p className="eyebrow">A vocabulary for inquiry</p><h1>Ideas that move<br /><em>between the texts.</em></h1><p>These terms are not fixed definitions. Each is a doorway whose meaning shifts with context, speaker, and Upanishad.</p></header><section className="concept-grid content-width">{concepts.map((concept, i) => { const count = upanishads.filter((u) => u.conceptIds.includes(concept.slug)).length; return <Link key={concept.slug} href={`/concepts/${concept.slug}`} className="concept-card" style={{ "--accent": concept.color } as React.CSSProperties}><span className="concept-index">0{i + 1}</span><div className="concept-glyph" aria-hidden="true"><span /></div><p className="eyebrow">{concept.sanskrit}</p><h2>{concept.name}</h2><p>{concept.summary}</p><small>Appears across {count} teachings <span>→</span></small></Link>; })}</section></main>; }
