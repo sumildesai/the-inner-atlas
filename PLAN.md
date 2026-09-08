@@ -194,3 +194,20 @@ Add methodology/about content, placeholder warnings, deployment configuration, S
 - Internet Sacred Text Archive — searchable sacred-text collection and contextual presentation: https://sacred-texts.com/
 
 These are interaction and information-architecture references, not content authorities for the Upanishads.
+
+## Implementation status
+
+Implemented in the current directory:
+
+- Next.js App Router application with static export support
+- Home constellation, explorer, profiles, concepts, comparison, search, about, and Śānti mantra routes
+- Responsive visual system with keyboard focus, reduced-motion support, and mobile text alternatives
+- Static sitemap and robots routes
+- GitHub Pages workflow at `.github/workflows/deploy-pages.yml`
+- Local git history initialized on `main`
+
+Validation passes with ESLint, TypeScript, and a production Pages build using `NEXT_PUBLIC_BASE_PATH=/the-inner-atlas`.
+
+## Remaining publishing step
+
+GitHub publication is blocked until the local GitHub CLI authentication is refreshed. The stored token for `sumildesai` is invalid. After running `gh auth refresh -h github.com`, create the private repository (default name: `the-inner-atlas`), add it as `origin`, push `main`, and enable Pages using GitHub Actions. The workflow is ready for that deployment.
