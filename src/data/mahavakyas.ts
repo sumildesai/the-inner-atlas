@@ -6,6 +6,7 @@ export type Mahavakya = {
   devanagari: string;
   transliteration: string;
   meaning: string;
+  explanation: string;
   sourceSlug: string;
   sourceName: string;
   locator: string;
@@ -17,6 +18,7 @@ export const mahavakyas: Mahavakya[] = [
     devanagari: "प्रज्ञानं ब्रह्म",
     transliteration: "Prajñānam brahma",
     meaning: "Consciousness is Brahman.",
+    explanation: "Consciousness means awareness, the capacity to know or experience. In an Advaita reading, this saying identifies awareness itself—not an individual thought or feeling—with Brahman, the reality on which everything depends.",
     sourceSlug: "aitareya",
     sourceName: "Aitareya Upanishad",
     locator: "3.1.3",
@@ -26,6 +28,7 @@ export const mahavakyas: Mahavakya[] = [
     devanagari: "तत्त्वमसि",
     transliteration: "Tat tvam asi",
     meaning: "You are That.",
+    explanation: "“That” refers to the reality from which all things arise, often called Brahman. In this teaching to his son, a father uses examples such as salt dissolved in water: unseen, yet present throughout. Advaita reads the saying as identifying the deepest self with that reality.",
     sourceSlug: "chandogya",
     sourceName: "Chandogya Upanishad",
     locator: "6.8.7",
@@ -36,6 +39,7 @@ export const mahavakyas: Mahavakya[] = [
     devanagari: "अहं ब्रह्मास्मि",
     transliteration: "Aham brahmāsmi",
     meaning: "I am Brahman.",
+    explanation: "In an Advaita reading, “I” means the deepest self, not a person’s name, status, or personality. Brahman is the reality on which everything depends; the saying is not a claim that one individual is more important or powerful than others.",
     sourceSlug: "brihadaranyaka",
     sourceName: "Brihadaranyaka Upanishad",
     locator: "1.4.10",
@@ -45,6 +49,7 @@ export const mahavakyas: Mahavakya[] = [
     devanagari: "अयमात्मा ब्रह्म",
     transliteration: "Ayam ātmā brahma",
     meaning: "This Self is Brahman.",
+    explanation: "Ātman means self; Brahman names the reality on which everything depends. Advaita reads this saying as identifying the two, rather than treating the self as an isolated individual. The text explores the self through waking, dreaming, and deep sleep.",
     sourceSlug: "mandukya",
     sourceName: "Mandukya Upanishad",
     locator: "2",
