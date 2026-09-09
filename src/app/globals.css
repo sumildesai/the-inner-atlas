@@ -40,6 +40,11 @@ em { color:var(--gold);font-weight:400; }
 .hero-mandala:before,.hero-mandala:after { content:"";position:absolute;border:1px solid rgba(184,138,70,.22);border-radius:50%;inset:9%; }
 .hero-mandala:after { inset:25%; }
 .hero-mandala span { font-family:Georgia,serif;color:rgba(184,138,70,.38);font-size:7rem; }
+.beginner-introduction { padding:8rem 0; }
+.beginner-path { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line); }
+.beginner-path>div { background:var(--cream);padding:2rem; }
+.beginner-path>div>p:last-child { margin:0;color:var(--muted);font-family:Georgia,serif;font-size:1.05rem; }
+.beginner-actions { display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:2rem; }
 
 .section-heading { display:flex;justify-content:space-between;align-items:end;margin-bottom:4rem;gap:3rem; }
 .section-heading h2 { font-family:Georgia,serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:400;line-height:.97;letter-spacing:-.04em;margin:0; }
@@ -317,13 +322,13 @@ summary { cursor:pointer;text-transform:uppercase;letter-spacing:.12em;font-size
   .hero-actions { align-items:flex-start;flex-direction:column;gap:1.2rem; }
   .hero-mandala { top:32%; }
   .section-heading h2 { font-size:3.1rem; }
-  .constellation-section,.invocation-feature,.featured-teachings,.linked-teachings { padding:5rem 0; }
+  .beginner-introduction,.constellation-section,.invocation-feature,.featured-teachings,.linked-teachings { padding:5rem 0; }
   .constellation-list { grid-template-columns:1fr; }
   .mantra-heading { flex-direction:column; }
   .mantra-panel { padding:1.5rem; }
   .mantra-panel.compact .arrow-link { margin-left:0; }
   .mantra-meaning { grid-template-columns:1fr;gap:.5rem; }
-  .card-grid,.concept-grid,.idea-river .content-width>div,.prose-grid { grid-template-columns:1fr; }
+  .beginner-path,.card-grid,.concept-grid,.idea-river .content-width>div,.prose-grid { grid-template-columns:1fr; }
   .text-card { min-height:390px; }
   .upanishad-emblem--card { right:.5rem;top:4.5rem;width:8rem; }
   .upanishad-emblem--hero { width:10rem; }
