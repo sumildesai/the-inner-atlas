@@ -21,6 +21,10 @@ export type Upanishad = {
   question: string;
   summary: string;
   whyItMatters: string;
+  readingGuide?: {
+    approach: string;
+    background: string;
+  };
   themes: string[];
   conceptIds: string[];
   passage: Passage;
@@ -87,6 +91,10 @@ export const upanishads: Upanishad[] = [
     question: "What can death teach us about a life worth choosing?",
     summary: "Through the dialogue of young Nachiketa and Death, it explores desire, discernment, selfhood, and immortality.",
     whyItMatters: "Its vivid story makes difficult philosophical choices immediate, human, and memorable.",
+    readingGuide: {
+      approach: "Story-led · recommended first",
+      background: "No prior knowledge needed. Follow Nachiketa’s conversation with Death, letting the characters and their choices introduce the ideas."
+    },
     themes: ["death", "choice", "inner journey"], conceptIds: ["atman", "knowledge", "liberation", "death", "meditation"],
     passage: { text: "The good and the merely pleasant approach us; the wise learn to distinguish them.", locator: "Book 1 · working paraphrase", status: "placeholder" }, color: "#ad6861", emblem: { id: "katha-buffalo", label: "Yama’s buffalo" }, veda: "yajur", recension: "krishna"
   },
@@ -111,6 +119,10 @@ export const upanishads: Upanishad[] = [
     question: "What do waking, dreaming, and deep sleep reveal about awareness?",
     summary: "The shortest principal Upanishad maps consciousness through four quarters and the sound Om.",
     whyItMatters: "In only twelve statements, it offers an influential framework for studying experience itself.",
+    readingGuide: {
+      approach: "Short but abstract · read slowly",
+      background: "Choose this for close contemplation rather than a story. Familiarity with Self (Atman) and ultimate reality (Brahman) helps; the concept guides on the teaching page offer background."
+    },
     themes: ["states of awareness", "Om", "silence"], conceptIds: ["atman", "brahman", "consciousness", "meditation"],
     passage: { text: "The sound Om is all this: what was, what is, what will be—and what is beyond time.", locator: "Verse 1 · working paraphrase", status: "placeholder" }, color: "#8375a0", veda: "atharva"
   },
@@ -135,6 +147,10 @@ export const upanishads: Upanishad[] = [
     question: "What subtle reality connects the vast world and the person within it?",
     summary: "An expansive collection of teachings, stories, contemplations, and analogies centered on underlying unity.",
     whyItMatters: "Salt in water, rivers meeting the sea, and the seed of a fig make invisible truths tangible.",
+    readingGuide: {
+      approach: "Teaching stories and everyday analogies",
+      background: "Choose this if concrete images help you learn. The larger, varied collection rewards reading one teaching at a time; its everyday analogies offer an entry point without prior knowledge."
+    },
     themes: ["unity", "teaching stories", "subtle essence"], conceptIds: ["atman", "brahman", "knowledge", "meditation", "creation"],
     passage: { text: "That subtle essence is the self of all this. That is the real; that is the self; you are that.", locator: "Chapter 6 · working paraphrase", status: "placeholder" }, color: "#6e8e9c", veda: "sama"
   },
