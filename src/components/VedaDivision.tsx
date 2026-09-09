@@ -13,6 +13,7 @@ export default function VedaDivision() {
 
   return (
     <div className="veda-division">
+      <p>Mahāvākya means “great saying”: a short statement used to reflect on the self and reality. These four are especially valued in Advaita Vedānta, a tradition that reads the deepest self and ultimate reality as not separate. Other traditions interpret them differently. Select a saying to read an explanation.</p>
       <ol className="veda-branches">
         {vedas.map((veda) => {
           const mahavakya = mahavakyaForVeda(veda.id)!;
@@ -64,7 +65,7 @@ export default function VedaDivision() {
                 aria-controls="mahavakya-detail"
                 onClick={() => setActiveVeda(veda.id)}
               >
-                <span>Mahāvākya{mahavakya.recension === "shukla" ? " · Śukla" : ""}</span>
+                <span>Mahāvākya · great saying{mahavakya.recension === "shukla" ? " · Śukla" : ""}</span>
                 <strong>{mahavakya.transliteration}</strong>
               </button>
               <span className="veda-stem" aria-hidden="true" />
@@ -87,13 +88,14 @@ export default function VedaDivision() {
             {activeMahavakya.sourceName} <span>{activeMahavakya.locator} →</span>
           </Link>
         </div>
+        <p>{activeMahavakya.explanation}</p>
       </article>
       <div className="shanti-throughline">
         <span className="throughline-rule" aria-hidden="true" />
         <p className="throughline-refrain" lang="sa">{shantiRefrain.devanagari}</p>
         <p className="throughline-iast">{shantiRefrain.transliteration}</p>
         <p className="throughline-meaning">{shantiRefrain.meaning}</p>
-        <Link className="arrow-link" href="/shanti-mantras">Hear all five invocations <span>→</span></Link>
+        <Link className="arrow-link" href="/shanti-mantras">Read all five peace invocations <span>→</span></Link>
       </div>
     </div>
   );
